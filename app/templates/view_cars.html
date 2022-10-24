@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}  
+  <head>
+      <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+        }
+        th {
+          text-align: left;
+        }
+        </style>
+        <title>Homework 2</title>
+    </head>
+
+    <body>
+      <table>
+        <tr>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Origin</th>
+          <th>MPG</th>
+
+        </tr>
+        {% for car in cars %}
+          <tr>
+            <td>{{car.name}}</td>
+            <td>{{car.year}}</td>
+            <td>{{car.origin}}</td>
+            <td>{{car.mpg}}</td>
+          </tr>
+        {% endfor %}
+        {% endblock %}
+    </body>
+

@@ -1,0 +1,34 @@
+<html>
+    <head>
+      <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+        }
+        th {
+          text-align: left;
+        }
+        </style>
+        <title> Homework 2 </title>
+    </head>
+    
+    <body>
+        <h1 style=color:red> Types of Cars </h1>
+        <hr>
+        <div>
+          <!-- add car -->
+          <a href="/add_car">Add Car</a>
+          <a href="/wipe">Remove All Records</a>
+          <a href="/view_all">View All</a>
+          <!-- search for car -->
+          <a href="/search">Search</a>
+          <!-- sort model alphebetically -->
+          <a href="/sort_model">Sort Car Models</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
